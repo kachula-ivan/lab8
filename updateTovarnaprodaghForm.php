@@ -9,13 +9,13 @@
 <body>
 
     <?php
-        include("showStudents.php")    
+        include("showTovarnaprodagh.php")    
     ?>
 
-<form action="updateStudents.php" method="post">
+<form action="updateTovarnaprodagh.php" method="post">
         <label>ІД рядка який змінюємо</label><input name="id" type="text"><br>
-        <label>Нове значення ПІБ</label><input name="pib" type="text"><br>
-        <label>Нове значення ІД групи</label><input name="gr" type="text"><br>
+        <label>Нове значення opys</label><input name="pib" type="text"><br>
+        <label>Нове значення price</label><input name="gr" type="text"><br>
         <input type="submit" value="Змінюємо рядок">
 </form>
 

@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('localhost', 'root', '', 'koledj'); // Створюємо нове підключення з назвою $mysqli за допомогою створення об'єта класу mysqli. Параметри підключення по порядку: сервер, логін, пароль, БД
+$mysqli = new mysqli('localhost', 'root', '', 'mybd'); // Створюємо нове підключення з назвою $mysqli за допомогою створення об'єта класу mysqli. Параметри підключення по порядку: сервер, логін, пароль, БД
 $mysqli->set_charset("utf8"); // Встановлюємо кодування utf8
 
 if (mysqli_connect_errno()) {
@@ -13,7 +13,7 @@ $id = $_POST['id'];
 $pib = $_POST['pib'];
 $gr = $_POST['gr'];
 
-$sql = "UPDATE students SET pib='$pib', grupa_id='$gr' WHERE id='$id'";
+$sql = "UPDATE tovar_na_prodaj SET opys='$pib', price='$gr' WHERE id='$id'";
 
 
 if($mysqli->query($sql)){
@@ -29,5 +29,5 @@ else
 /*Закриваємо з'єднання*/
 $mysqli->close();
 
-include("showStudents.php")
+include("showTovarnaprodagh.php")
 ?>

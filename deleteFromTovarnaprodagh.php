@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('localhost', 'root', '', 'koledj'); // Створюємо нове підключення з назвою $mysqli за допомогою створення об'єта класу mysqli. Параметри підключення по порядку: сервер, логін, пароль, БД
+$mysqli = new mysqli('localhost', 'root', '', 'mybd'); // Створюємо нове підключення з назвою $mysqli за допомогою створення об'єта класу mysqli. Параметри підключення по порядку: сервер, логін, пароль, БД
 $mysqli->set_charset("utf8"); // Встановлюємо кодування utf8
 
 if (mysqli_connect_errno()) {
@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
 $id = $_POST['id'];
 
 
-$sql = "DELETE FROM students WHERE id='$id'";
+$sql = "DELETE FROM tovar_na_prodaj WHERE id='$id'";
 
 
 if($mysqli->query($sql)){
@@ -28,5 +28,5 @@ else
 /*Закриваємо з'єднання*/
 $mysqli->close();
 
-include("showStudents.php")
+include("showTovarnaprodagh.php")
 ?>

@@ -9,14 +9,13 @@
 <body>
 
     <?php
-        include("showStudents.php")    
+        include("showTovarnaprodagh.php")    
     ?>
 
-    <form action="insertIntoStudents.php" method="post">
-        <label>ПІБ</label><input name="pib" type="text"><br>
-        <label>ІД групи</label><input name="gr" type="text"><br>
-        <input type="submit" value="Вставити рядок">
-    </form>
+<form action="deleteFromTovarnaprodagh.php" method="post">
+        <label>ІД рядка, який видаляємо</label><input name="id" type="text"><br>
+        <input type="submit" value="Видалити рядок">
+</form>
 
 </body>
 </html>
